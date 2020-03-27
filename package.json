@@ -1,45 +1,382 @@
 {
-	"name": "statamic-docs",
-	"displayName": "Statamic Docs",
-	"description": "Find Statamic documentation pages from the command palette",
-	"version": "0.0.1",
-	"engines": {
-		"vscode": "^1.43.0"
-	},
-	"categories": [
-		"Other"
-	],
-	"activationEvents": [
-		"onCommand:extension.helloWorld"
-	],
-	"main": "./out/extension.js",
-	"contributes": {
-		"commands": [
-			{
-				"command": "extension.helloWorld",
-				"title": "Hello World"
-			}
-		]
-	},
-	"scripts": {
-		"vscode:prepublish": "npm run compile",
-		"compile": "tsc -p ./",
-		"lint": "eslint src --ext ts",
-		"watch": "tsc -watch -p ./",
-		"pretest": "npm run compile && npm run lint",
-		"test": "node ./out/test/runTest.js"
-	},
-	"devDependencies": {
-		"@types/glob": "^7.1.1",
-		"@types/mocha": "^7.0.1",
-		"@types/node": "^12.11.7",
-		"@types/vscode": "^1.43.0",
-		"eslint": "^6.8.0",
-		"@typescript-eslint/parser": "^2.18.0",
-		"@typescript-eslint/eslint-plugin": "^2.18.0",
-		"glob": "^7.1.6",
-		"mocha": "^7.0.1",
-		"typescript": "^3.7.5",
-		"vscode-test": "^1.3.0"
-	}
+    "name": "statamic-docs",
+    "displayName": "Statamic Docs",
+    "description": "Find Statamic documentation pages from the command palette",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.43.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.statamicDocsAmp",
+        "onCommand:extension.statamicDocsAntlers",
+        "onCommand:extension.statamicDocsAssets",
+        "onCommand:extension.statamicDocsAugmentation",
+        "onCommand:extension.statamicDocsBlueprints",
+        "onCommand:extension.statamicDocsBuildABlog",
+        "onCommand:extension.statamicDocsBuildAPhotoGallery",
+        "onCommand:extension.statamicDocsCaching",
+        "onCommand:extension.statamicDocsCli",
+        "onCommand:extension.statamicDocsCollectionsAndEntries",
+        "onCommand:extension.statamicDocsConditionalFields",
+        "onCommand:extension.statamicDocsConfiguration",
+        "onCommand:extension.statamicDocsControllers",
+        "onCommand:extension.statamicDocsCpTranslations",
+        "onCommand:extension.statamicDocsDashboard",
+        "onCommand:extension.statamicDocsDebugging",
+        "onCommand:extension.statamicDocsDeployYourFirstSite",
+        "onCommand:extension.statamicDocsEmail",
+        "onCommand:extension.statamicDocsExtending",
+        "onCommand:extension.statamicDocsFields",
+        "onCommand:extension.statamicDocsFieldsets",
+        "onCommand:extension.statamicDocsFieldtypes",
+        "onCommand:extension.statamicDocsForms",
+        "onCommand:extension.statamicDocsFrontendOverview",
+        "onCommand:extension.statamicDocsGlobals",
+        "onCommand:extension.statamicDocsInstallation",
+        "onCommand:extension.statamicDocsKnowledgeBase",
+        "onCommand:extension.statamicDocsLicensing",
+        "onCommand:extension.statamicDocsLivePreview",
+        "onCommand:extension.statamicDocsModifiers",
+        "onCommand:extension.statamicDocsMultiSite",
+        "onCommand:extension.statamicDocsNavigation",
+        "onCommand:extension.statamicDocsOauth",
+        "onCommand:extension.statamicDocsPrinciples",
+        "onCommand:extension.statamicDocsProtectingContent",
+        "onCommand:extension.statamicDocsQuickStart",
+        "onCommand:extension.statamicDocsRelationships",
+        "onCommand:extension.statamicDocsRequirements",
+        "onCommand:extension.statamicDocsRestApi",
+        "onCommand:extension.statamicDocsRevisions",
+        "onCommand:extension.statamicDocsRouting",
+        "onCommand:extension.statamicDocsScreencasts",
+        "onCommand:extension.statamicDocsSearch",
+        "onCommand:extension.statamicDocsStache",
+        "onCommand:extension.statamicDocsStaticCaching",
+        "onCommand:extension.statamicDocsStructures",
+        "onCommand:extension.statamicDocsTags",
+        "onCommand:extension.statamicDocsTaxonomies",
+        "onCommand:extension.statamicDocsTemplateEngines",
+        "onCommand:extension.statamicDocsUpgradeGuide",
+        "onCommand:extension.statamicDocsUsers",
+        "onCommand:extension.statamicDocsVariables",
+        "onCommand:extension.statamicDocsVersionControl",
+        "onCommand:extension.statamicDocsViewModels",
+        "onCommand:extension.statamicDocsViews",
+        "onCommand:extension.statamicDocsWritingStages",
+        "onCommand:extension.statamicDocsYaml"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.statamicDocsAmp",
+                "category": "Statamic Docs",
+                "title": "Amp"
+            },
+            {
+                "command": "extension.statamicDocsAntlers",
+                "category": "Statamic Docs",
+                "title": "Antlers"
+            },
+            {
+                "command": "extension.statamicDocsAssets",
+                "category": "Statamic Docs",
+                "title": "Assets"
+            },
+            {
+                "command": "extension.statamicDocsAugmentation",
+                "category": "Statamic Docs",
+                "title": "Augmentation"
+            },
+            {
+                "command": "extension.statamicDocsBlueprints",
+                "category": "Statamic Docs",
+                "title": "Blueprints"
+            },
+            {
+                "command": "extension.statamicDocsBuildABlog",
+                "category": "Statamic Docs",
+                "title": "Build A Blog"
+            },
+            {
+                "command": "extension.statamicDocsBuildAPhotoGallery",
+                "category": "Statamic Docs",
+                "title": "Build A Photo Gallery"
+            },
+            {
+                "command": "extension.statamicDocsCaching",
+                "category": "Statamic Docs",
+                "title": "Caching"
+            },
+            {
+                "command": "extension.statamicDocsCli",
+                "category": "Statamic Docs",
+                "title": "Cli"
+            },
+            {
+                "command": "extension.statamicDocsCollectionsAndEntries",
+                "category": "Statamic Docs",
+                "title": "Collections And Entries"
+            },
+            {
+                "command": "extension.statamicDocsConditionalFields",
+                "category": "Statamic Docs",
+                "title": "Conditional Fields"
+            },
+            {
+                "command": "extension.statamicDocsConfiguration",
+                "category": "Statamic Docs",
+                "title": "Configuration"
+            },
+            {
+                "command": "extension.statamicDocsControllers",
+                "category": "Statamic Docs",
+                "title": "Controllers"
+            },
+            {
+                "command": "extension.statamicDocsCpTranslations",
+                "category": "Statamic Docs",
+                "title": "Cp Translations"
+            },
+            {
+                "command": "extension.statamicDocsDashboard",
+                "category": "Statamic Docs",
+                "title": "Dashboard"
+            },
+            {
+                "command": "extension.statamicDocsDebugging",
+                "category": "Statamic Docs",
+                "title": "Debugging"
+            },
+            {
+                "command": "extension.statamicDocsDeployYourFirstSite",
+                "category": "Statamic Docs",
+                "title": "Deploy Your First Site"
+            },
+            {
+                "command": "extension.statamicDocsEmail",
+                "category": "Statamic Docs",
+                "title": "Email"
+            },
+            {
+                "command": "extension.statamicDocsExtending",
+                "category": "Statamic Docs",
+                "title": "Extending"
+            },
+            {
+                "command": "extension.statamicDocsFields",
+                "category": "Statamic Docs",
+                "title": "Fields"
+            },
+            {
+                "command": "extension.statamicDocsFieldsets",
+                "category": "Statamic Docs",
+                "title": "Fieldsets"
+            },
+            {
+                "command": "extension.statamicDocsFieldtypes",
+                "category": "Statamic Docs",
+                "title": "Fieldtypes"
+            },
+            {
+                "command": "extension.statamicDocsForms",
+                "category": "Statamic Docs",
+                "title": "Forms"
+            },
+            {
+                "command": "extension.statamicDocsFrontendOverview",
+                "category": "Statamic Docs",
+                "title": "Frontend Overview"
+            },
+            {
+                "command": "extension.statamicDocsGlobals",
+                "category": "Statamic Docs",
+                "title": "Globals"
+            },
+            {
+                "command": "extension.statamicDocsInstallation",
+                "category": "Statamic Docs",
+                "title": "Installation"
+            },
+            {
+                "command": "extension.statamicDocsKnowledgeBase",
+                "category": "Statamic Docs",
+                "title": "Knowledge Base"
+            },
+            {
+                "command": "extension.statamicDocsLicensing",
+                "category": "Statamic Docs",
+                "title": "Licensing"
+            },
+            {
+                "command": "extension.statamicDocsLivePreview",
+                "category": "Statamic Docs",
+                "title": "Live Preview"
+            },
+            {
+                "command": "extension.statamicDocsModifiers",
+                "category": "Statamic Docs",
+                "title": "Modifiers"
+            },
+            {
+                "command": "extension.statamicDocsMultiSite",
+                "category": "Statamic Docs",
+                "title": "Multi Site"
+            },
+            {
+                "command": "extension.statamicDocsNavigation",
+                "category": "Statamic Docs",
+                "title": "Navigation"
+            },
+            {
+                "command": "extension.statamicDocsOauth",
+                "category": "Statamic Docs",
+                "title": "Oauth"
+            },
+            {
+                "command": "extension.statamicDocsPrinciples",
+                "category": "Statamic Docs",
+                "title": "Principles"
+            },
+            {
+                "command": "extension.statamicDocsProtectingContent",
+                "category": "Statamic Docs",
+                "title": "Protecting Content"
+            },
+            {
+                "command": "extension.statamicDocsQuickStart",
+                "category": "Statamic Docs",
+                "title": "Quick Start"
+            },
+            {
+                "command": "extension.statamicDocsRelationships",
+                "category": "Statamic Docs",
+                "title": "Relationships"
+            },
+            {
+                "command": "extension.statamicDocsRequirements",
+                "category": "Statamic Docs",
+                "title": "Requirements"
+            },
+            {
+                "command": "extension.statamicDocsRestApi",
+                "category": "Statamic Docs",
+                "title": "Rest Api"
+            },
+            {
+                "command": "extension.statamicDocsRevisions",
+                "category": "Statamic Docs",
+                "title": "Revisions"
+            },
+            {
+                "command": "extension.statamicDocsRouting",
+                "category": "Statamic Docs",
+                "title": "Routing"
+            },
+            {
+                "command": "extension.statamicDocsScreencasts",
+                "category": "Statamic Docs",
+                "title": "Screencasts"
+            },
+            {
+                "command": "extension.statamicDocsSearch",
+                "category": "Statamic Docs",
+                "title": "Search"
+            },
+            {
+                "command": "extension.statamicDocsStache",
+                "category": "Statamic Docs",
+                "title": "Stache"
+            },
+            {
+                "command": "extension.statamicDocsStaticCaching",
+                "category": "Statamic Docs",
+                "title": "Static Caching"
+            },
+            {
+                "command": "extension.statamicDocsStructures",
+                "category": "Statamic Docs",
+                "title": "Structures"
+            },
+            {
+                "command": "extension.statamicDocsTags",
+                "category": "Statamic Docs",
+                "title": "Tags"
+            },
+            {
+                "command": "extension.statamicDocsTaxonomies",
+                "category": "Statamic Docs",
+                "title": "Taxonomies"
+            },
+            {
+                "command": "extension.statamicDocsTemplateEngines",
+                "category": "Statamic Docs",
+                "title": "Template Engines"
+            },
+            {
+                "command": "extension.statamicDocsUpgradeGuide",
+                "category": "Statamic Docs",
+                "title": "Upgrade Guide"
+            },
+            {
+                "command": "extension.statamicDocsUsers",
+                "category": "Statamic Docs",
+                "title": "Users"
+            },
+            {
+                "command": "extension.statamicDocsVariables",
+                "category": "Statamic Docs",
+                "title": "Variables"
+            },
+            {
+                "command": "extension.statamicDocsVersionControl",
+                "category": "Statamic Docs",
+                "title": "Version Control"
+            },
+            {
+                "command": "extension.statamicDocsViewModels",
+                "category": "Statamic Docs",
+                "title": "View Models"
+            },
+            {
+                "command": "extension.statamicDocsViews",
+                "category": "Statamic Docs",
+                "title": "Views"
+            },
+            {
+                "command": "extension.statamicDocsWritingStages",
+                "category": "Statamic Docs",
+                "title": "Writing Stages"
+            },
+            {
+                "command": "extension.statamicDocsYaml",
+                "category": "Statamic Docs",
+                "title": "Yaml"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "lint": "eslint src --ext ts",
+        "watch": "tsc -watch -p ./",
+        "pretest": "npm run compile && npm run lint",
+        "test": "node ./out/test/runTest.js"
+    },
+    "devDependencies": {
+        "@types/glob": "^7.1.1",
+        "@types/mocha": "^7.0.1",
+        "@types/node": "^12.11.7",
+        "@types/vscode": "^1.43.0",
+        "eslint": "^6.8.0",
+        "@typescript-eslint/parser": "^2.18.0",
+        "@typescript-eslint/eslint-plugin": "^2.18.0",
+        "glob": "^7.1.6",
+        "mocha": "^7.0.1",
+        "typescript": "^3.7.5",
+        "vscode-test": "^1.3.0"
+    }
 }
