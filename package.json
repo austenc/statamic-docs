@@ -3,6 +3,9 @@
     "displayName": "Statamic Docs",
     "description": "Find Statamic documentation pages from the command palette",
     "version": "0.0.1",
+    "icon": "img/icon.png",
+    "publisher": "austenc",
+    "repository": "https://github.com/austenc/statamic-docs",
     "engines": {
         "vscode": "^1.43.0"
     },
